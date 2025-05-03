@@ -69,6 +69,8 @@ pip install -r requirements.txt
 
 Esse comando instala todas as bibliotecas necessárias.
 
+Solicitar o arquivo .env para o admin do projeto
+
 ---
 
 ## ✏️ FAZENDO O PRIMEIRO COMMIT

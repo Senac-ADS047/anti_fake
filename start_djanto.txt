@@ -12,7 +12,8 @@ Criar:
     .env
     add: secret_key
     settings:
-        from pathlib import Path, os
+        import os
+        from pathlib import Path
         from dotenv import load_dotenv
         load_dotenv()
         SECRET_KEY = str(os.getenv('SECRET_KEY'))
