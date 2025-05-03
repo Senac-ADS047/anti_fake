@@ -1,0 +1,143 @@
+
+# Tutorial Completo - Como baixar, rodar e enviar alterações no projeto (Git + GitHub + VSCode)
+
+## ⚙️ Requisitos:
+- Git instalado (https://git-scm.com/downloads)
+- Python instalado (https://www.python.org/downloads/)
+- Visual Studio Code instalado (https://code.visualstudio.com/)
+- Acesso ao repositório GitHub
+
+---
+
+## 📁 CRIANDO A PASTA DO PROJETO E ABRINDO NO VS CODE
+
+1. Crie uma pasta em algum local do seu computador. Exemplo: na Área de Trabalho, crie a pasta `projetos_faculdade`.
+2. Dentro dela, crie uma subpasta para o projeto. Exemplo: `anti_fake`.
+3. Clique com o botão direito dentro da pasta `anti_fake` e selecione **"Abrir com o Code"**.
+   > Ou abra o VS Code e vá em **Arquivo > Abrir Pasta...** e escolha a pasta.
+   > Ou arraste a pasta para o VSCode
+
+---
+
+
+
+## ☁️ CLONANDO O PROJETO DO GITHUB
+
+Se ainda não fez, instale o Git (https://git-scm.com/) e configure uma conta no GitHub.
+
+No terminal do VS Code (para abrir o terminal atalho: `Ctrl + aspas` ou `Ctrl + Shift + '`):
+
+```
+git clone https://github.com/Senac-ADS047/anti_fake.git
+```
+
+Entre na pasta clonada digitando no terminal:
+
+```
+cd anti_fake
+
+```
+
+## 🐍 CRIANDO O AMBIENTE VIRTUAL (Windows)
+
+No terminal dentro da pasta clonada:
+
+```
+python -m venv venv
+```
+
+Depois, ative a máquina virtual com:
+
+```
+venv\Scripts\activate
+```
+
+Se tudo der certo, você verá `(venv)` aparecendo no início da linha do terminal.
+
+---
+
+
+---
+
+## 📦 INSTALANDO DEPENDÊNCIAS DO PROJETO
+
+Se o projeto tem um arquivo chamado `requirements.txt`, rode:
+
+```
+pip install -r requirements.txt
+```
+
+Esse comando instala todas as bibliotecas necessárias.
+
+---
+
+## ✏️ FAZENDO O PRIMEIRO COMMIT
+
+1. Crie ou edite arquivos no VS Code
+2. No terminal, digite:
+
+```
+git status
+```
+
+3. Para adicionar os arquivos modificados:
+
+```
+git add .
+```
+
+4. Para salvar suas alterações com uma mensagem:
+
+```
+git commit -m "Minha primeira alteração"
+```
+
+5. Para enviar para o GitHub:
+
+```
+git push origin main
+```
+
+---
+
+## 🔁 FAZENDO OS PRÓXIMOS COMMITS
+
+Sempre que fizer alterações:
+
+1. Verificar mudanças:
+```
+git status
+```
+
+2. Adicionar mudanças:
+```
+git add .
+```
+
+3. Fazer commit:
+```
+git commit -m "Descreva aqui o que mudou"
+```
+
+4. Enviar ao GitHub:
+```
+git push origin main
+```
+
+---
+
+## 🆘 DICAS FINAIS
+
+- Para ver a branch atual:
+```
+git branch
+```
+
+- Se quiser mudar para a branch `main`:
+```
+git checkout main
+```
+
+---
+
+Pronto! Agora você consegue baixar, rodar e contribuir com o projeto.
