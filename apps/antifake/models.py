@@ -1,9 +1,17 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+import os
+
+
+
+
+def caminho_foto_usuario(instance, filename):
+    # Cria a pasta com o nome do username
+    return os.path.join('usuarios', instance.username, filename)
 
 # Modelo de usuário personalizado
 class Usuario(AbstractUser):
-    foto = models.ImageField(upload_to='usuarios/fotos/', blank=True, null=True)
+    foto = models.ImageField(upload_to=caminho_foto_usuario, blank=True, null=True)
     codigo_verificacao = models.CharField(max_length=6, blank=True, null=True)
     email_verificado = models.BooleanField(default=False)
 

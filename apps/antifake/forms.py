@@ -8,7 +8,7 @@ class CadastroUsuarioForm(UserCreationForm):
         required=True,
         error_messages={'invalid': 'Email inválido: por favor digite um email válido'}
     )
-    foto = forms.ImageField(required=True)
+    foto = forms.ImageField(required=False)
 
     class Meta:
         model = Usuario
