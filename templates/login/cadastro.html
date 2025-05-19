@@ -1,0 +1,52 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}Cadastro{% endblock %}
+
+{% block content %}
+<div class="cadastro">
+    <form method="post" enctype="multipart/form-data" action="{% url 'cadastro' %}">
+        {% csrf_token %}
+
+        {% if form.non_field_errors %}
+            <div class="error">
+                {{ form.non_field_errors }}
+            </div>
+        {% endif %}
+
+        <label for="id_foto">Foto:</label>
+        {{ form.foto.errors }}
+        {{ form.foto }}
+
+        <br><br>
+
+        <label for="id_username">Nome de Usuário:</label>
+        {{ form.username.errors }}
+        {{ form.username }}
+
+        <br><br>
+
+        <label for="id_email">Email:</label>
+        {{ form.email.errors }}
+        {{ form.email }}
+
+        <br><br>
+
+        <div class="senhas">
+            <div class="campo">
+                <label for="id_password1">Senha:</label>
+                {{ form.password1.errors }}
+                {{ form.password1 }}
+            </div>
+            <div class="campo">
+                <label for="id_password2">Confirmar Senha:</label>
+                {{ form.password2.errors }}
+                {{ form.password2 }}
+            </div>
+        </div>
+
+        <br>
+        <input type="submit" value="Cadastrar">
+    </form>
+</div>
+{% endblock %}

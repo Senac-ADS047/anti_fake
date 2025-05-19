@@ -1,0 +1,27 @@
+{% extends "base/base.html" %}
+
+{% block title %}Lodin{% endblock %}
+
+{% block content %}
+
+{% if erro %}
+    <p style="color: red;">{{ erro }}</p>
+{% endif %}
+
+<div class="cadastro">
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username"><br><br>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <input type="submit" value="Entrar">
+    </form>
+</div>
+
+
+
+{% endblock %}

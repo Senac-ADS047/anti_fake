@@ -1,0 +1,109 @@
+body{
+    background-color:rgb(238, 230, 230);
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: black;
+    padding: 1rem;
+    border-radius: 30px;
+}
+
+nav h1 {
+    color: yellow;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;          
+    gap: 20px;              
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav-links li a {
+    color: yellow;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 30px;
+}
+
+
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+.class{
+    text-align: center;
+    margin-top: 350px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estiliza os inputs de texto, email e senha */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background: #f6f7f8;
+    border-radius: 30px;
+}
+
+/* Campos de senha lado a lado */
+.senhas {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Cada campo de senha ocupa metade */
+.campo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo geral do formulário */
+.cadastro {
+    max-width: 600px;
+    margin-top: 160px;
+    margin-left: 600px;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 30px;
+    border: solid black
+}
+
+/* Estilo do botão */
+input[type="submit"] {
+    padding: 10px 40px;
+    font-size: 16px;
+    background-color: black;
+    color: yellow;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+     border-radius: 30px;
+}
+
+input[type="submit"]:hover {
+    background-color: #333;
+     border-radius: 30px;
+}
+
+
