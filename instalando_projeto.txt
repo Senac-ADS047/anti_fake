@@ -84,7 +84,39 @@ Ele vai gerar a secret_key que precisa estar no .env entre '', por exemplo:
 
 SECRET_KEY='1234567891234afzvdfs'
 
+
+## Criando as tabelas do BD:
+No terminal:
+´´´
+python manage.py makemigrations
+´´´
+
+´´´
+python manage.py migrate
+´´´
+
+
 ## Execuldado o sistema:
+
+No terminal:
+´´´
+python manage.py createsuperuser
+
+´´´
+
+Preencha os dados que o Django vai pedir:
+Username (nome de usuário)
+
+Email address (pode ser fictício em testes)
+
+Password (vai pedir para repetir)
+
+Pronto! Agora você pode acessar o painel de administração:
+Acesse no navegador:
+
+http://127.0.0.1:8000/admin/
+Use o login e a senha que acabou de criar.
+
 
 No terminal:
 
