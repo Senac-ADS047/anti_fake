@@ -11,9 +11,8 @@
 
 ## 📁 CRIANDO A PASTA DO PROJETO E ABRINDO NO VS CODE
 
-1. Crie uma pasta em algum local do seu computador. Exemplo: na Área de Trabalho, crie a pasta `projetos_faculdade`.
-2. Dentro dela, crie uma subpasta para o projeto. Exemplo: `anti_fake`.
-3. Clique com o botão direito dentro da pasta `anti_fake` e selecione **"Abrir com o Code"**.
+1. Crie uma pasta em algum local do seu computador. Exemplo: na Área de Trabalho, crie a pasta `antifake` ou o nome que preferir.
+2. Clique com o botão direito dentro da pasta `antifake` e selecione **"Abrir com o Code"**.
    > Ou abra o VS Code e vá em **Arquivo > Abrir Pasta...** e escolha a pasta.
    > Ou arraste a pasta para o VSCode
 
@@ -69,77 +68,41 @@ pip install -r requirements.txt
 
 Esse comando instala todas as bibliotecas necessárias.
 
-Solicitar o arquivo .env para o admin do projeto
+## Banco de dados e senhas:
+
+Abra seu workbench e crie um database com nome de antifake_db.
+
+Dentro do projeto, vai ter um arquivo com nome de .env.example, faça uma copia dele
+e altere para o nome para .env   (não esqueça do " . " no inicio do nome)
+Dentro desse arquivo .env, coloque o nome do DB, o user e sua senha padrão do workbench
+
+No terminal copie e cole o codigo abaixo:
+python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+
+
+Ele vai gerar a secret_key que precisa estar no .env entre '', por exemplo:
+
+SECRET_KEY='1234567891234afzvdfs'
+
+## Execuldado o sistema:
+
+No terminal:
+
+```
+python manage.py runserver
+```
+Ele vai da um retornar no terminal algo assim:
+(venv) PS C:\Anderson\Senac\teste\anti_fake> python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 21, 2025 - 12:59:20
+Django version 5.2, using settings 'setup.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+O sistema esta rodando no link mostrado acima
+http://127.0.0.1:8000/
 
 ---
-
-## ✏️ FAZENDO O PRIMEIRO COMMIT
-
-1. Crie ou edite arquivos no VS Code
-2. No terminal, digite:
-
-```
-git status
-```
-
-3. Para adicionar os arquivos modificados:
-
-```
-git add .
-```
-
-4. Para salvar suas alterações com uma mensagem:
-
-```
-git commit -m "Minha primeira alteração"
-```
-
-5. Para enviar para o GitHub:
-
-```
-git push origin main
-```
-
----
-
-## 🔁 FAZENDO OS PRÓXIMOS COMMITS
-
-Sempre que fizer alterações:
-
-1. Verificar mudanças:
-```
-git status
-```
-
-2. Adicionar mudanças:
-```
-git add .
-```
-
-3. Fazer commit:
-```
-git commit -m "Descreva aqui o que mudou"
-```
-
-4. Enviar ao GitHub:
-```
-git push origin main
-```
-
----
-
-## 🆘 DICAS FINAIS
-
-- Para ver a branch atual:
-```
-git branch
-```
-
-- Se quiser mudar para a branch `main`:
-```
-git checkout main
-```
-
----
-
-Pronto! Agora você consegue baixar, rodar e contribuir com o projeto.
